@@ -26,6 +26,6 @@ jobs:
       - name: "构建成功 - 通知远浅让他开心"
         if: success()
         run: curl -H "Content-Type:application/json" -X POST ${{ secrets.SEND_MAIL_API }} -d '{"text":"【文件服务 RPC】 叮叮当当的构建成功~!", "desp":"服务更新~ https://github.com/${{ github.repository }}/actions","to":"${{ secrets.EMAIL }}"}'
-      - name: "构建成功 - 通知服务集群更新服务"
-        if: success()
-        run: curl -X POST ${{ secrets.DOCKER_HOOK }}
+#      - name: "构建成功 - 通知服务集群更新服务"
+#        if: success()
+#        run: curl -X POST ${{ secrets.DOCKER_HOOK }}
