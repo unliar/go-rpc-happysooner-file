@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	//_ "github.com/micro/go-plugins/registry/consul"
 	"go-rpc-happysooner-file/internal"
 )
 
