@@ -9,3 +9,7 @@ func SMMSIPictureUpload() (string, error) {
 func GuruPictureUpload() (string, error) {
 	return "", nil
 }
+
+//type FileUploadProvider interface {
+//	Picture() (string, error)
+//}
