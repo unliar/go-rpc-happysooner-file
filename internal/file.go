@@ -6,6 +6,7 @@ import (
 	"github.com/micro/go-micro/v3/logger"
 	"github.com/unliar/happysooner-proto/file"
 	"go-rpc-happysooner-file/internal/handler"
+	"go-rpc-happysooner-file/internal/service/db"
 	"go-rpc-happysooner-file/internal/utils"
 	"time"
 )
@@ -22,6 +23,7 @@ func Init() {
 		}),
 		micro.WrapHandler(utils.LogWrapper),
 	)
+	db.InitDBClient()
 	srv.Init()
 	_ = file.RegisterFileSVHandler(srv.Server(), new(handler.FileHandler))
 
